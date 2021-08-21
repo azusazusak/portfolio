@@ -1,0 +1,25 @@
+@import "../../../css/variables";
+
+#contact {
+  padding-top: 5vh;
+  margin-bottom: 30vh;
+  .email {
+    margin-top: 1vh;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $color_2;
+  }
+  .buttons {
+    margin-top: 5vh;
+    display: flex;
+    .btn {
+      margin-right: 1.5rem;
+    }
+    .linkedin {
+      padding: 1.2rem;
+    }
+    .resume {
+      padding: 1.4rem;
+    }
+  }
+}

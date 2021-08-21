@@ -1,0 +1,133 @@
+@import "../../../css/variables";
+
+#flyoutNavi {
+  .menu-btn {
+      position: fixed;
+      top: 0.8rem;
+      right: 0.8rem;
+      display: flex;
+      height: 4rem;
+      width: 4rem;
+      justify-content: center;
+      align-items: center;
+      z-index: 200;
+      @media screen and (min-width: $width_pc) {  
+        display: none;
+      }
+      span, span:before, span:after {
+          content: '';
+          display: block;
+          height: 0.1rem;
+          width: 2rem;
+          border-radius: 1rem;
+          background-color: $color_4;
+          position: absolute;
+          transition: $transition_hover;            
+      }
+      span:before {
+          bottom: 0.6rem;
+      }
+      span:after {
+          top: 0.6rem;
+      }
+  }
+  #menu-btn-check {
+    display: none; // hide the check box
+  }
+  #menu-btn-check:checked ~ .menu-btn span {
+      background-color: rgba(255, 255, 255, 0); //Make the middle line transparent when the menu is open.
+  }
+  #menu-btn-check:checked ~ .menu-btn span::before {
+      bottom: 0;
+      transform: rotate(45deg);
+      background-color: $color_1;
+  }
+  #menu-btn-check:checked ~ .menu-btn span::after {
+      top: 0;
+      transform: rotate(-45deg);
+      background-color: $color_1;
+  }
+  #flyoutContainer {
+    z-index: 100;
+    background-color: $color_2;
+    width: 80vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: right .2s linear;
+    .top {
+      padding: 6vh 1.6rem 10vh 1.6rem;
+      .logoBox {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5vh;
+        .logo { 
+          width: 6rem;
+        }
+      }
+      h2 {
+        text-transform: uppercase;
+        color: $white;
+        font-size: 2.2rem;
+        margin-bottom: 2vh;
+      }
+      h4 {
+        font-weight: 400;
+        color: $white;
+        font-size: 0.9rem;
+      }
+    }
+    #naviLinks {
+      .naviLink {
+        display: block;
+        text-decoration: none;
+        color: $white;
+        padding: 1.3rem 1.6rem;
+        font-family: $font_2;
+        font-weight: 500;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        transition: $transition_hover;
+      }
+      .active {
+        color: $color_4;
+        background-color: $color_3;
+      }
+    }
+    @media only screen and (min-width: $width_mb) and (max-width: $width_pc) {  
+      width: 70vw;
+    }
+    @media screen and (min-width: $width_pc) {  
+      width: 13rem;
+      left: 0;
+    }
+    @media screen and (min-width: 1850px) {  
+      width: 20rem;
+      left: 0;
+      .top {
+        .logoBox {
+          .logo { 
+            width: 8rem;
+          }
+        }
+        h2 {
+          font-size: 2.4rem;
+          line-height: 2.6rem;
+        }
+        h4 {
+          font-size: 1.4rem;
+        }
+      }
+      #anchorLinks {
+        .anchorLink {
+          padding: 1.5rem 1.6rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+#flyoutNavi.active #flyoutContainer {
+  right: 0;
+}

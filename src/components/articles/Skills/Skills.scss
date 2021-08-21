@@ -1,0 +1,22 @@
+@import "../../../css/variables";
+
+#skills {
+  padding-top: 5vh;
+  margin-bottom: 20vh;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .box {
+      width: 100%;
+      margin-bottom: 5vh;
+      @media screen and (min-width: $width_pc) {  
+        width: 30%; 
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
+}

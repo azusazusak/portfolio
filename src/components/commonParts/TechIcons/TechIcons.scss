@@ -1,0 +1,15 @@
+@import "../../../css/variables";
+
+.techs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1vh; 
+  .tech {
+    color: $color_4;
+    border: 0.05rem solid $color_4; 
+    padding: 0.5rem 0.6rem;
+    border-radius: 0.3rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,37 @@
+// This file contains the variables for CSS.
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$color_1: #0A2463;
+$color_2: #3E92CC;
+$color_3: #FFFAFF;
+$color_4: #E57692;
+$color_5: #1E1B18;
+$white: #ffffff;
+$black: #000000;
+
+//for mediaquery
+$width_mb: 481px;
+$width_pc: 1020px;
+$width_wide: 1681px;
+
+$font_1: 'Poppins', sans-serif; //Body font
+$font_2: 'Jost', sans-serif; //Heading font
+
+$fontSize_pc: 100%;
+$fontSize_mb: 92%;
+$fontSize_min: 90%;
+$fontSize_h1: 2.2rem;
+$fontSize_h2: 1.6rem;
+$fontSize_h3: 1.4rem;
+$fontSize_h4: 1rem;
+$fontSize_h5: 1rem;
+
+$marginBottom_h1: 5vh;
+$marginBottom_h2: 1.5vh;
+$marginBottom_h3: 1.5vh;
+$marginBottom_h4: 0;
+$marginBottom_h5: 0;
+
+$transition_hover: all .1s linear;
+

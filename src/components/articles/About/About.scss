@@ -1,0 +1,119 @@
+@import "../../../css/variables";
+
+#about {
+  padding-top: 5vh;
+  margin-bottom: 20vh;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .photoBox {
+      width: 100%;
+      height: 90vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: space-between;
+      margin-bottom: 4vh;
+      .aboutPhoto {
+        width: 44vw;
+        height: 44vw;
+        border-radius: 0.5rem;
+        position: relative;
+        box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+        .photoDiv {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        }
+        .hoverCover {
+          width: 100%;
+          height: 100%;
+          border-radius: 0.5rem;
+          padding: 0 1rem;
+          position: absolute;
+          top: 0;
+          left: 0; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          background-color: rgba(229, 118, 146, 0);;
+          transition: $transition_hover;
+          p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0);
+            transition: $transition_hover;
+          }
+        }
+        .hoverCover:hover {
+          background-color: rgba(229, 118, 146, 0.8);
+          p {
+            color: rgba(255, 255, 255, 1);
+          }
+        }
+      }
+
+    }
+    .textBox{
+      width: 100%;
+      p:first-child {
+        margin-bottom: 2vh;
+      }
+    }
+    @media only screen and (min-width: $width_mb) and (max-width: $width_pc) {  
+      .photoBox {
+        height: 80vw;
+        .aboutPhoto {
+          width: 39vw;
+          height: 39vw
+        }
+      }
+    }
+    @media screen and (min-width: $width_pc) {  
+        flex-direction: row-reverse;
+        .photoBox {
+          width: 30vw;
+          height: 30vw;
+          .aboutPhoto {
+            width: 14.6vw;
+            height: 14.6vw;
+          }
+        }
+        .textBox {
+          width: 37vw;
+        }
+    }
+    @media screen and (min-width: 1440px) {  
+      flex-direction: row-reverse;
+      .photoBox {
+        width: 30vw;
+        height: 30vw;
+        .aboutPhoto {
+          width: 14.7vw;
+          height: 14.7vw;
+        }
+      }
+      .textBox {
+        width: 40vw;
+      }
+    }
+    @media screen and (min-width: $width_wide) {  
+      flex-direction: row-reverse;
+      .photoBox {
+        width: 25vw;
+        height: 25vw;
+        .aboutPhoto {
+          width: 12.3vw;
+          height: 12.3vw;
+        }
+      }
+      .textBox {
+        width: 40vw;
+      }
+    }
+  }
+
+}
+

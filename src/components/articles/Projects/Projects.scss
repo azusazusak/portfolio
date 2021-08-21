@@ -1,0 +1,11 @@
+@import "../../../css/variables";
+
+#projects {
+  padding-top: 5vh;
+  margin-bottom: 20vh;
+  .projectCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

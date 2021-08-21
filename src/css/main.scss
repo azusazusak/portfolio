@@ -1,0 +1,116 @@
+@import "variables"; //refer to "_variables.scss" file
+
+* {
+    box-sizing: border-box;
+}
+
+html { 
+    font-family: $font_1;
+    font-size: $fontSize_mb; 
+    color: $color_5;
+    // scroll-behavior: smooth;
+    // height: 100%;
+}
+
+body {
+    background-color: $color_3;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5 { 
+    font-family: $font_2; 
+    font-weight: 500;
+}
+
+h1 { 
+    font-size: $fontSize_h1; 
+    margin-bottom: $marginBottom_h1;
+    color: $color_1;
+    text-transform: uppercase;
+}
+
+h2 { 
+    font-size: $fontSize_h2; 
+    margin-bottom: $marginBottom_h2; 
+    line-height: 2.1rem;
+    color: $color_2; 
+}
+
+h3 { 
+    font-size: $fontSize_h3; 
+    margin-bottom: $marginBottom_h3;
+}
+
+h4 { 
+    font-size: $fontSize_h4; 
+    margin-bottom: $marginBottom_h4;
+}
+
+h5 { 
+    font-size: $fontSize_h5; 
+    margin-bottom: $marginBottom_h5;
+}
+
+p {
+    font-weight: 300;
+    line-height: 1.6rem;
+}
+
+.handle {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+@media screen and (max-width: $width_mb) {  
+    .hide-s { display: none!important; }
+}
+
+@media only screen and (min-width: $width_mb) and (max-width: $width_pc) {  
+    .hide-m { display: none!important; }
+    .handle { width: 80%; } 
+}
+
+@media screen and (min-width: $width_pc) {  
+    .hide-l { display: none!important; }
+    .handle { width: 80%; } 
+}
+
+@media screen and (min-width: 601px) { 
+    html { font-size: $fontSize_pc; } 
+}
+
+@media only screen and (max-height: 800px) and (max-width: 1100px) {  
+    html { font-size: $fontSize_mb; } 
+}
+
+@media screen and (max-width: 360px) { 
+    html { font-size: $fontSize_min; } 
+}
+
+.pageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .pageContentWrapper {
+    width: 100%;
+    padding: 0;
+    .pageContents {
+      width: 100%;
+      padding: 0 5vw;
+      @media only screen and (min-width: $width_mb) and (max-width: $width_pc) {  
+          padding: 0 10vw;
+      }
+    }
+    @media screen and (min-width: $width_pc) {  
+      padding-left: 13rem;
+    }
+    @media screen and (min-width: 1850px) {  
+      padding-left: 20rem;
+    }    
+  }
+
+}

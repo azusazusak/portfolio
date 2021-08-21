@@ -1,0 +1,81 @@
+@import "../../../css/variables";
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
+
+#hello {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .faceImage {
+    margin-bottom: 5vh;
+    img {
+      width: 15rem;
+      filter: drop-shadow(0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.3));
+    }
+  }
+  .container {
+    text-align: center;
+    .greeting {
+      margin-bottom: 4vh;
+      h1 {
+        text-transform: capitalize;
+        margin-bottom: 2vh;
+      }
+    }
+    .buttonBox {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      .viewMyWork {
+        margin-right: 1rem;
+      }
+      .viewVideo {
+        border: none;
+      }
+    }  
+  }
+  @media only screen and (min-width: $width_mb) and (max-width: $width_pc) {  
+    .faceImage {
+      margin-bottom: 8vh;
+      img {
+        width: 20rem;
+      }
+    }
+  }
+  @media screen and (min-width: $width_pc) {  
+    flex-direction: row;
+    .faceImage {
+      margin-bottom: 0;
+      margin-right: 5vw;
+      img {
+        width: 20rem;
+      }
+    }
+    .container {
+      text-align: left;
+      .greeting {
+        margin-bottom: 5vh;
+        h1 {
+          margin-bottom: 3vh;
+        }
+      }
+      .buttonBox {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+.bounce {
+    animation: bounce 5s ease-out infinite;
+    opacity: 1;
+}
+@keyframes bounce {
+    0%, 5%, 15%, 25% {
+        transform: scale(1.0);
+    }
+    10%, 20% {
+        transform: scale(1.03);
+    }
+}
