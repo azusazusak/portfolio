@@ -5,6 +5,7 @@ import FlyoutNavi from "../../components/layout/FlyoutNavi/FlyoutNavi";
 import Photo from "../../components/commonParts/Photo/Photo";
 import TechIcons from '../../components/commonParts/TechIcons/TechIcons';
 import ProjectLinks from '../../components/articles/ProjectLinks/ProjectLinks';
+import ScreenShots from '../../components/articles/ScreenShots/ScreenShots';
 
 const Project = () => {
 
@@ -20,6 +21,7 @@ const Project = () => {
   })
 
   let background;
+  let screenshots_2;
 
   if (data.background) {
     background = (
@@ -27,6 +29,14 @@ const Project = () => {
         <h2>Background of Project</h2>
         <p>{data.background}</p>
       </>
+    );
+  }
+
+  if (data.screenshots_2) {
+    screenshots_2 = (
+      <ScreenShots
+        screenshots={data.screenshots_2}
+      />
     );
   }
 
@@ -51,6 +61,16 @@ const Project = () => {
               <p>{data.challenges}</p>
             </article>
             <ProjectLinks 
+              siteLink={data.siteLink}
+              githubLink={data.githubLink}
+              prevProjectName={prevProjectName}
+              nextProjectName={nextProjectName}
+            />
+            <ScreenShots 
+              screenshots={data.screenshots_1}
+            />
+            {screenshots_2}
+            <ProjectLinks
               siteLink={data.siteLink}
               githubLink={data.githubLink}
               prevProjectName={prevProjectName}
