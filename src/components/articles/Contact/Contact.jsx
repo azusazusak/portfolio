@@ -37,7 +37,7 @@ export default function Contact() {
           image={resume}
           shape="circle"
           type="link"
-          link=""
+          link="https://azusak.com/documents/Resume_Azusa_Kunigo.pdf"
           newTab="true"
           className="resume"
         />
