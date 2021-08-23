@@ -14,9 +14,9 @@
       margin-bottom: 5vh;
       h3 {
         color: $color_1;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }     
-      img {
+      .border {
         border: 0.05rem solid rgba(0, 0, 0, 0.3);
       }
     }
@@ -28,7 +28,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       .imageBox {
-        width: 48%;
+        width: 47%;
       }
       .imageBox:nth-last-child(2) {
         margin-bottom: 0;

@@ -8,10 +8,17 @@ import ayusveda_thumb from "../imgs/ayusveda/ayusveda_thumb.jpg";
 import ayusveda_top from "../imgs/ayusveda/ayusveda_top.jpg";
 import ayusveda_ss_1 from "../imgs/ayusveda/ayusveda_ss_1.jpg";
 import ayusveda_ss_2 from "../imgs/ayusveda/ayusveda_ss_2.jpg";
+import ayusveda_brand_1 from "../imgs/ayusveda/ayusveda_brand_1.jpg";
+import ayusveda_brand_2 from "../imgs/ayusveda/ayusveda_brand_2.jpg";
+import ayusveda_brand_3 from "../imgs/ayusveda/ayusveda_brand_3.jpg";
 import rds_thumb from "../imgs/rds/rds_thumb.jpg";
 import rds_top from "../imgs/rds/rds_top.jpg";
 import rds_ss_1 from "../imgs/rds/rds_ss_1.jpg";
 import rds_ss_2 from "../imgs/rds/rds_ss_2.jpg";
+import rds_brand_1 from "../imgs/rds/rds_brand_1.jpg";
+import rds_brand_2 from "../imgs/rds/rds_brand_2.jpg";
+import rds_brand_3 from "../imgs/rds/rds_brand_3.jpg";
+import rds_brand_4 from "../imgs/rds/rds_brand_4.jpg";
 import fallingFruits_thumb from "../imgs/fallingFruits/fallingFruits_thumb.jpg";
 import fallingFruits_top from "../imgs/fallingFruits/fallingFruits_top.jpg";
 import fallingFruits_ss_1 from "../imgs/fallingFruits/fallingFruits_ss_1.jpg";
@@ -26,6 +33,9 @@ import sarahTaylor_thumb from "../imgs/sarahTaylor/sarahTaylor_thumb.jpg";
 import sarahTaylor_top from "../imgs/sarahTaylor/sarahTaylor_top.jpg";
 import sarahTaylor_ss_1 from "../imgs/sarahTaylor/sarahTaylor_ss_1.jpg";
 import sarahTaylor_ss_2 from "../imgs/sarahTaylor/sarahTaylor_ss_2.jpg";
+import sarahTaylor_brand_1 from "../imgs/sarahTaylor/sarahTaylor_brand_1.jpg";
+import sarahTaylor_brand_2 from "../imgs/sarahTaylor/sarahTaylor_brand_2.jpg";
+import sarahTaylor_brand_3 from "../imgs/sarahTaylor/sarahTaylor_brand_3.jpg";
 
 const projectData = {
   fairycastle: {
@@ -38,7 +48,7 @@ const projectData = {
     thumbnail: fairycastle_thumb,
     topImage: fairycastle_top,
     goal: "Fairy Castle is an online booking site built in PHP. The main requirement was to create a system that allows users to search for properties and make reservations based on criteria such as dates and number of people. In addition, the administrator needed to be able to add properties and check the reservation status in the CMS. I did all the coding as well as the design and branding by myself.",
-    background: "This was a school project to create an e-commerce website in PHP. The fictional client is an online tourism company specializing in unique accommodation rentals around the world",
+    background: "This was a school project to create an e-commerce website in PHP. The fictional client is an online tourism company specializing in unique accommodation rentals around the world.",
     challenges: "Initially, I analyzed the features of the three major existing hotel booking sites (Airbnb, Booking.com, Expedia) and set them as benchmarks. I designed the UI/UX and information architecture by comparing sites that people are already familiar with. The most difficult part was figuring out the SQL statement to search for properties with location, property type, number of guests and dates. Since there were only simple examples on the Internet, I combined a number of them and through many trials and errors, I succeeded in completing the SQL statement.",
     siteLink: "https://azusak.com/projects/fairycastle/",
     githubLink: "https://github.com/azusazusak/fairycastle",
@@ -47,14 +57,16 @@ const projectData = {
       images: [
         { name: "Home", img: fairycastle_ss_1},
         { name: "Property Details", img: fairycastle_ss_2 },
-      ]
+      ],
+      border: true,
     },
     screenshots_2: {
       title: "Admin Site",
       images: [
         { name: "Property List", img: fairycastle_ss_3 },
         { name: "Add a Property", img: fairycastle_ss_4 },
-      ]
+      ],
+      border: true,
     },
   },
   ayusveda: {
@@ -76,9 +88,18 @@ const projectData = {
       images: [
         { name: "Home", img: ayusveda_ss_1 },
         { name: "Natural Skin Care", img: ayusveda_ss_2 },
-      ]
+      ],
+      border: true,
     },
-    screenshots_2: null,
+    screenshots_2: {
+      title: "Branding",
+      images: [
+        { name: "Logo", img: ayusveda_brand_1 },
+        { name: "Colour Palette", img: ayusveda_brand_2 },
+        { name: "Typography", img: ayusveda_brand_3 },
+      ],
+      border: false,
+    },
   },
   rds: {
     id: 2,
@@ -99,9 +120,19 @@ const projectData = {
       images: [
         { name: "Home", img: rds_ss_1 },
         { name: "Service Details", img: rds_ss_2 },
-      ]
+      ],
+      border: true,
     },
-    screenshots_2: null,
+    screenshots_2: {
+      title: "Branding",
+      images: [
+        { name: "Logo", img: rds_brand_1 },
+        { name: "Iconic Animal", img: rds_brand_2 },
+        { name: "Colour Palette", img: rds_brand_3 },
+        { name: "Typography", img: rds_brand_4 },
+      ],
+      border: false,
+    },
   },
   fallingfruits: {
     id: 3,
@@ -122,7 +153,8 @@ const projectData = {
       images: [
         { name: "Start", img: fallingFruits_ss_1 },
         { name: "In Game", img: fallingFruits_ss_2 },
-      ]
+      ],
+      border: true,
     },
     screenshots_2: null,
   },
@@ -147,7 +179,8 @@ const projectData = {
         { name: "Profile", img: instagramish_ss_2 },
         { name: "Messages", img: instagramish_ss_3 },
         { name: "Edit Profile", img: instagramish_ss_4 },
-      ]
+      ],
+      border: true,
     },
     screenshots_2: null,
   },
@@ -170,9 +203,18 @@ const projectData = {
       images: [
         { name: "Home", img: sarahTaylor_ss_1 },
         { name: "Portfolio", img: sarahTaylor_ss_2 },
-      ]
+      ],
+      border: true,
     },
-    screenshots_2: null,
+    screenshots_2: {
+      title: "Branding",
+      images: [
+        { name: "Logo", img: sarahTaylor_brand_1 },
+        { name: "Colour Palette", img: sarahTaylor_brand_2 },
+        { name: "Typography", img: sarahTaylor_brand_3 },
+      ],
+      border: false,
+    },
   },
 }
 

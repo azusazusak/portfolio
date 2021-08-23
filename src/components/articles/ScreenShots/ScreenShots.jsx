@@ -2,11 +2,14 @@ import './ScreenShots.scss';
 
 export default function ScreenShots({screenshots}) {
 
+  let border = screenshots.border ? "border" : "";
+
   const image = screenshots.images.map((image, index) => {
+
     return (
-      <div key={index} className="imageBox">
+      <div key={index} className="imageBox ">
         <h3>{image.name}</h3>
-        <img src={(image.img)} alt={image.name} />
+        <img src={(image.img)} alt={image.name} className={border} />
       </div>
     );
   })
