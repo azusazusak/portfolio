@@ -8,6 +8,7 @@ import {
 import ScrollToTop from "./scrollToTop"
 import Home from "./pages/Home/Home";
 import Project from './pages/Project/Project'
+import ScrollTest from './pages/ScrollTest/ScrollTest'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/:projectName" exact component={Project} />
+          <Route path="/scrolltest" exact component={ScrollTest} />
         </Switch>
       </Router>
     </>
