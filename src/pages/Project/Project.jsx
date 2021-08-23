@@ -1,14 +1,11 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './Project.scss';
 import projectData from '../../assets/data/projectData.js';
 import FlyoutNavi from "../../components/layout/FlyoutNavi/FlyoutNavi";
 import Photo from "../../components/commonParts/Photo/Photo";
 import TechIcons from '../../components/commonParts/TechIcons/TechIcons';
-import Button from "../../components/commonParts/Button/Button";
-import earth from "../../assets/imgs/web.png";
-import github from "../../assets/imgs/github-brands.png";
-import ArrowL from "../../components/commonParts/arrows/ArrowL";
-import ArrowR from "../../components/commonParts/arrows/ArrowR";
+import ProjectLinks from '../../components/articles/ProjectLinks/ProjectLinks';
+import ScreenShots from '../../components/articles/ScreenShots/ScreenShots';
 
 const Project = () => {
 
@@ -24,8 +21,7 @@ const Project = () => {
   })
 
   let background;
-  let websiteButton;
-  let githubButton;
+  let screenshots_2;
 
   if (data.background) {
     background = (
@@ -36,28 +32,12 @@ const Project = () => {
     );
   }
 
-  if (data.siteLink) {
-    websiteButton =
-      <Button
-        text="Live Website"
-        image={earth}
-        shape="oval"
-        type="link"
-        link={data.siteLink}
-        newTab="true"
+  if (data.screenshots_2) {
+    screenshots_2 = (
+      <ScreenShots
+        screenshots={data.screenshots_2}
       />
-  }
-
-  if (data.githubLink) {
-    githubButton = 
-      <Button
-        text = "View Source"
-        image = { github }
-        shape = "oval"
-        type = "link"
-        link={data.githubLink}
-        newTab = "true"
-      />    
+    );
   }
 
   return (
@@ -80,24 +60,22 @@ const Project = () => {
               <h2>Challenges and Approaches</h2>
               <p>{data.challenges}</p>
             </article>
-            <article className="links">
-              <div className="buttonBox">
-                {websiteButton}
-                {githubButton}
-              </div>
-            </article>
-            <article className="projectLinks">
-              <div className="linkBox">
-                <Link to={`/${prevProjectName}`} className="projectLink">
-                  <ArrowL/>
-                  Previous Project
-                </Link>
-                <Link to={`/${nextProjectName}`} className="projectLink">
-                  Next Project
-                  <ArrowR />
-                </Link>
-              </div>
-            </article>
+            <ProjectLinks 
+              siteLink={data.siteLink}
+              githubLink={data.githubLink}
+              prevProjectName={prevProjectName}
+              nextProjectName={nextProjectName}
+            />
+            <ScreenShots 
+              screenshots={data.screenshots_1}
+            />
+            {screenshots_2}
+            <ProjectLinks
+              siteLink={data.siteLink}
+              githubLink={data.githubLink}
+              prevProjectName={prevProjectName}
+              nextProjectName={nextProjectName}
+            />
           </div>
         </div>
       </section>

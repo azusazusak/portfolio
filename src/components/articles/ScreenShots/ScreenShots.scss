@@ -1,0 +1,41 @@
+@import "../../../css/variables";
+
+.screenshots {
+  margin-bottom: 10vh;
+  background-color: $white;
+  padding: 5vh 5vw;
+  box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  h2 {
+    margin-bottom: 3vh;
+  }
+  .container {
+    .imageBox { 
+      margin-bottom: 5vh;
+      h3 {
+        color: $color_1;
+        font-size: 1.3rem;
+      }     
+      .border {
+        border: 0.05rem solid rgba(0, 0, 0, 0.3);
+      }
+    }
+    .imageBox:last-child {
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $width_pc) {  
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .imageBox {
+        width: 47%;
+      }
+      .imageBox:nth-last-child(2) {
+        margin-bottom: 0;
+      }
+      .imageBox:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
