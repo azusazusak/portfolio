@@ -1,33 +1,135 @@
-// .puff {
-//   position: fixed;
-//   width: 3rem;
-//   z-index: 1000;
-//   top: 0;
-//   left: 50vw;
-//   animation-name: flying;
-//   animation-duration: 10s;
-//   animation-timing-function: ease-out;
-//   animation-iteration-count: infinite;
-// }
+.puff {
+  position: fixed;
+  width: 3rem;
+  z-index: 1000;
+  top: 100vh;
+  left: 100vw;
+  opacity: 0;
+}
+
+.puff_1 {
+  animation: flying_1 50s infinite;
+  animation-timing-function: ease-in-out;
+}
+.puff_2 {
+  animation: flying_2 50s infinite;
+  animation-timing-function: ease-in;
+}
+.puff_3 {
+  animation: flying_3 50s infinite;
+  animation-timing-function: ease-in-out;
+}
+.puff_4 {
+  animation: flying_4 50s infinite;
+  animation-timing-function: ease-in;
+}
+.puff_5 {
+  animation: flying_5 50s infinite;
+  animation-timing-function: ease-in-out;
+}
 
 
-// @keyframes flying{
-// 	0% {
-// 		transform: translateY(100vh);
-// 	}
-// 	20% {
+@keyframes flying_1 {
+	0% {
+		top: 100vh;
+    left: 20vw;
+    transform: rotate(0deg); 
+    opacity: 1;
+	}
+	10% {
+    transform: rotate(-60deg);
+	}
+	29% {   
+    top: -10vh;
+    left: 60vw;
+    transform: rotate(-20deg); 
+    opacity: 1;   
+	}
+  30% {
+    opacity: 0;
+  }
+}
 
-// 	}
-// 	40% {
+@keyframes flying_2 {
+	20% {
+		top: 100vh;
+    left: 70vw;
+    transform: rotate(0deg); 
+    opacity: 1;
+	}
+	30% {
+    transform: rotate(-40deg);
+	}
+	39% {   
+    top: -10vh;
+    left: 30vw;
+    transform: rotate(-60deg); 
+    opacity: 1;   
+	}
+  40% {
+    opacity: 0;
+  }
+}
 
-// 	}
-// 	60% {
+@keyframes flying_3 {
+	40% {
+		top: 100vh;
+    left: 50vw;
+    transform: rotate(0deg); 
+    opacity: 1;
+	}
+	50% {
+    transform: rotate(-60deg);
+	}
+	59% {   
+    top: -10vh;
+    left: 10vw;
+    transform: rotate(-10deg); 
+    opacity: 1;   
+	}
+  60% {
+    opacity: 0;
+  }
+}
 
-// 	}
-// 	80% {
+@keyframes flying_4 {
+	60% {
+		top: 100vh;
+    left: 20vw;
+    transform: rotate(0deg); 
+    opacity: 1;
+	}
+	70% {
+    transform: rotate(-60deg);
+	}
+	79% {   
+    top: -10vh;
+    left: 60vw;
+    transform: rotate(-10deg); 
+    opacity: 1;   
+	}
+  80% {
+    opacity: 0;
+  }
+}
 
-// 	}
-// 	100% {
-// 		transform: translateY(-10vh);
-// 	}
-// }
+@keyframes flying_5 {
+	80% {
+		top: 100vh;
+    left: 70vw;
+    transform: rotate(0deg); 
+    opacity: 1;
+	}
+	85% {
+    transform: rotate(-40deg);
+	}
+	99% {   
+    top: -10vh;
+    left: 100vw;
+    transform: rotate(5deg); 
+    opacity: 1;   
+	}
+  100% {
+    opacity: 0;
+  }
+}
