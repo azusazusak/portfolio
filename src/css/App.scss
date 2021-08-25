@@ -1,37 +1,33 @@
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  .puff {
-    position: absolute;
-    width: 3rem;
-    z-index: 1000;
-    top: 0;
-    left: 50vw;
-    animation-name: flying;
-    animation-duration: 10s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
-  }
-}
+// .puff {
+//   position: fixed;
+//   width: 3rem;
+//   z-index: 1000;
+//   top: 0;
+//   left: 50vw;
+//   animation-name: flying;
+//   animation-duration: 10s;
+//   animation-timing-function: ease-out;
+//   animation-iteration-count: infinite;
+// }
 
-@keyframes flying{
-	0% {
-		transform: translateY(100vh);
-	}
-	20% {
 
-	}
-	40% {
+// @keyframes flying{
+// 	0% {
+// 		transform: translateY(100vh);
+// 	}
+// 	20% {
 
-	}
-	60% {
+// 	}
+// 	40% {
 
-	}
-	80% {
+// 	}
+// 	60% {
 
-	}
-	100% {
-		transform: translateY(-10vh);
-	}
-}
+// 	}
+// 	80% {
+
+// 	}
+// 	100% {
+// 		transform: translateY(-10vh);
+// 	}
+// }
