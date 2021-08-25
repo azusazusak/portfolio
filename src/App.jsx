@@ -8,10 +8,17 @@ import {
 import ScrollToTop from "./scrollToTop"
 import Home from "./pages/Home/Home";
 import Project from './pages/Project/Project'
+import './css/App.scss';
+import puff from "./assets/imgs/puff_single_color.png";
 
 function App() {
+
+  var h = window.outerHeight;
+  console.log(h);
+
   return (
-    <>
+    <div className="wrapper">
+      <img src={puff} alt="puff" className="puff" />
       <Router>
         <ScrollToTop />
         <Switch>
@@ -19,7 +26,7 @@ function App() {
           <Route path="/:projectName" exact component={Project} />
         </Switch>
       </Router>
-    </>
+    </div>
   );
 }
 
