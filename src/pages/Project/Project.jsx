@@ -22,6 +22,7 @@ const Project = () => {
 
   let background;
   let screenshots_2;
+  let pass;
 
   if (data.background) {
     background = (
@@ -65,6 +66,7 @@ const Project = () => {
               githubLink={data.githubLink}
               prevProjectName={prevProjectName}
               nextProjectName={nextProjectName}
+              pass={data.pass}
             />
             <ScreenShots 
               screenshots={data.screenshots_1}
@@ -75,7 +77,9 @@ const Project = () => {
               githubLink={data.githubLink}
               prevProjectName={prevProjectName}
               nextProjectName={nextProjectName}
+              pass={data.pass}
             />
+            {pass}
           </div>
         </div>
       </section>
