@@ -68,6 +68,10 @@ const projectData = {
       ],
       border: true,
     },
+    pass: {
+      username: "bob", 
+      password: "123",
+    }
   },
   ayusveda: {
     id: 1,
