@@ -51,6 +51,9 @@
 }
 
 @keyframes flying_2 {
+  19% {
+    opacity: 0;
+  }
 	20% {
 		top: 100vh;
     left: 70vw;
@@ -72,6 +75,9 @@
 }
 
 @keyframes flying_3 {
+  39% {
+    opacity: 0;
+  }
 	40% {
 		top: 100vh;
     left: 50vw;
@@ -93,6 +99,9 @@
 }
 
 @keyframes flying_4 {
+  59% {
+    opacity: 0;
+  }
 	60% {
 		top: 100vh;
     left: 20vw;
@@ -114,6 +123,9 @@
 }
 
 @keyframes flying_5 {
+  79% {
+    opacity: 0;
+  }
 	80% {
 		top: 100vh;
     left: 70vw;
@@ -123,14 +135,13 @@
 	85% {
     transform: rotate(-40deg);
 	}
-	99% {   
+	90% {   
     top: -10vh;
     left: 100vw;
     transform: rotate(5deg); 
     opacity: 1;   
 	}
   100% {
-    left: -100vw;
     opacity: 0;
   }
 }
