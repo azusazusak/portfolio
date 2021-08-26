@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
-  // Link,
 } from 'react-router-dom';
 import ScrollToTop from "./scrollToTop"
 import Home from "./pages/Home/Home";
@@ -20,13 +20,13 @@ function App() {
       <img src={puff} alt="puff" className="puff puff_3" />
       <img src={puff} alt="puff" className="puff puff_4" />
       <img src={puff} alt="puff" className="puff puff_5" />
-      <Router>
+      <HashRouter>
         <ScrollToTop />
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/:projectName" exact component={Project} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/:projectName" component={Project} />
         </Switch>
-      </Router>
+      </HashRouter>
     </>
   );
 }
