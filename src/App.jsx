@@ -27,6 +27,7 @@ function App() {
           <Route exact path="/:projectName" component={Project} />
         </Switch>
       </HashRouter>
+      <h5 className="copyright">&copy; 2021 Azusa Kunigo All rights reserved. </h5>
     </>
   );
 }

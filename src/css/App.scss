@@ -1,3 +1,14 @@
+@import "variables";
+
+.copyright {
+  text-align: right;
+  font-family: $font_1;
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-right: 5vw;
+  margin-bottom: 5vh;
+}
+
 .puff {
   position: fixed;
   width: 3rem;
