@@ -3,7 +3,6 @@ import './Contact.scss';
 import Button from "../../commonParts/Button/Button";
 import github from "../../../assets/imgs/github-brands.png";
 import linkedin from "../../../assets/imgs/linkedin-in-brands.png";
-import resume from "../../../assets/imgs/file-alt-regular.png";
 
 export default function Contact() {
 
@@ -31,15 +30,6 @@ export default function Contact() {
           link="https://www.linkedin.com/"
           newTab="true"
           className="linkedin"
-        />
-        <Button
-          text=""
-          image={resume}
-          shape="circle"
-          type="link"
-          link="https://azusak.com/documents/Resume_Azusa_Kunigo.pdf"
-          newTab="true"
-          className="resume"
         />
         </div>
     </article>
